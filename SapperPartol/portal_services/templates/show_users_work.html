@@ -1,0 +1,34 @@
+    <h1>待审核角色列表</h1>
+<table>
+<thead>
+            <tr>
+                <th style="">用户名</th>
+                <th style="">角色英文名</th>
+                <th style="">角色中文名</th>
+                <th style="">图片</th>
+                <th style="">状态</th>
+                <th style="">管理员操作说明</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+</table>
+<div class="show_user">
+    <table>
+        <tbody>
+            {% for key, value in users_work_status.items() %}
+            <tr>
+                <td>{{ key }}</td>
+                <td>{{ value.role }}</td>
+                <td>{{ value.chinese }}</td>
+                <td><img src="{{ value.photo_path }}" alt="" style="height: 80px;width: 80px"></td>
+                <td>{{ value.status }}</td>
+                <td id="{{ key }}" contenteditable="true">{{ value.statement }}</td>
+                <td>
+                    <a href="/pass_work?username={{ key }}&role={{ value.role }}&chinese_name={{ value.chinese }}"><button>通过</button></a>
+                    <button class="back-user-work" value="{{ key }}">打回</button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
