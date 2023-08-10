@@ -1,0 +1,42 @@
+.icon-container {
+  display: none;
+}
+
+.icon-container:hover {
+  display: block;
+}
+
+.form-button{
+  height: 35px;
+  /*width: 100px;*/
+  text-align: center;
+  background-color: #e3eeff;
+  border: 2px dashed #6991c7;
+}
+
+.form-button:hover {
+  color: #6991c7;
+  background-color: white;
+}
+
+.custom-dropdown-menu {
+    width: 100px !important;
+    padding: 0;
+}
+
+.sub-section-message{
+    font-size: 16px;
+}
+
+.section-message{
+    font-size: 18px;
+}
+
+.NLPDesc-message{
+    font-size: 15px;
+    padding-top: 2px;
+    padding-left: 5px;
+    text-align: center;
+    color: #344964;
+}
+
